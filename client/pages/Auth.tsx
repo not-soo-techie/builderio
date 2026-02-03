@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
 export default function Auth() {
   const handleGoogleLogin = () => {
     // This will be replaced with actual Google OAuth flow
     // For now, navigate to dashboard to simulate successful login
     // window.location.href = "/dashboard";
-    window.location.href = "https://builderio-backend.onrender.com/auth/google";
+    console.log("Logging...");
+    window.location.href = `${API_BASE_URL}/auth/google`;
+
   };
 
   return (

@@ -8,6 +8,9 @@ interface AssignmentState {
   hasSubmitted?: boolean;
 }
 
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL;
+
+
 export default function Dashboard() {
   const [state, setState] = useState<AssignmentState>({
     isAssigned: false,
@@ -45,7 +48,8 @@ export default function Dashboard() {
     setIsLoading(true);
 
     try {
-      const res = await fetch("http://localhost:3789/assign-task", {
+      console.log("Backend URL:", API_BASE_URL);
+      const res = await fetch(`${API_BASE_URL}/assign-task`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,7 +90,7 @@ export default function Dashboard() {
     setIsLoading(true);
 
     try {
-      const res = await fetch("http://localhost:3789/submit-project", {
+      const res = await fetch(`${API_BASE_URL}/submit-project`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -115,12 +119,12 @@ export default function Dashboard() {
   };
 
   const handleLogout = () => {
-    window.location.href = "https://builderio-backend.onrender.com/auth/logout";
+    window.location.href = `${API_BASE_URL}/auth/logout`;
   };
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://builderio-backend.onrender.com/auth/me", {
+    fetch(`${API_BASE_URL}/auth/me`, {
       credentials: "include",
     })
       .then((res) => {
