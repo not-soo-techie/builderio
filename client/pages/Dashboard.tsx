@@ -49,6 +49,7 @@ export default function Dashboard() {
 
     try {
       console.log("Backend URL:", API_BASE_URL);
+      console.log("Cl1");
       const res = await fetch(`${API_BASE_URL}/assign-task`, {
         method: "POST",
         headers: {
@@ -59,20 +60,24 @@ export default function Dashboard() {
           selectedPool: state.selectedPool,
         }),
       });
+      console.log("Cl2");
 
       const data = await res.json();
+      console.log("Cl3");
 
       if (!res.ok) {
         alert(data.message || "Assignment failed");
         setIsLoading(false);
         return;
       }
+      console.log("Cl4");
 
       setState({
         ...state,
         isAssigned: true,
         assignedTaskId: data.assignedTaskId,
       });
+      console.log("Cl5");
     } catch (err) {
       console.error(err);
       alert("Something went wrong");
