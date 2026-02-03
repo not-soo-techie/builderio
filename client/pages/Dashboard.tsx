@@ -24,26 +24,6 @@ export default function Dashboard() {
 
   const [repoUrl, setRepoUrl] = useState("");
 
-  // Mock user data - in production this would come from auth context
-  // const user = {
-  //   name: "Alex Johnson",
-  //   email: "alex.johnson@university.edu",
-  // };
-
-  // const handleAssignTask = async () => {
-  //   setIsLoading(true);
-  //   // Simulate API call
-  //   setTimeout(() => {
-  //     const taskId = Math.floor(Math.random() * state.selectedPool) + 1;
-  //     setState({
-  //       ...state,
-  //       isAssigned: true,
-  //       assignedTaskId: taskId,
-  //     });
-  //     setIsLoading(false);
-  //   }, 800);
-  // };
-
   const handleAssignTask = async () => {
     setIsLoading(true);
 
