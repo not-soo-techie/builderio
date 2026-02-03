@@ -4,7 +4,9 @@ export default function Auth() {
   const handleGoogleLogin = () => {
     // This will be replaced with actual Google OAuth flow
     // For now, navigate to dashboard to simulate successful login
-    window.location.href = "/dashboard";
+    // window.location.href = "/dashboard";
+    window.location.href = "http://localhost:3789/auth/google";
+
   };
 
   return (

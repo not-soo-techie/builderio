@@ -29,12 +29,12 @@ export default function Index() {
 
         {/* Headline */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6">
-          Workshop Task Allocator
+          Builder.io Task Allocator
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg sm:text-xl text-muted-foreground mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
-          Each student gets one randomly assigned project — only once
+          Each student gets one randomly assigned project - only once
         </p>
 
         {/* CTA Buttons */}
@@ -56,12 +56,12 @@ export default function Index() {
             Login with Google
           </Link>
 
-          <Link
+          {/* <Link
             to="/dashboard"
             className="w-full sm:w-auto px-8 py-3.5 sm:py-4 bg-secondary text-foreground font-semibold rounded-lg border border-border hover:bg-secondary/80 transition-colors duration-200 hidden sm:block"
           >
             View Demo
-          </Link>
+          </Link> */}
         </div>
 
         {/* Trust indicators */}
