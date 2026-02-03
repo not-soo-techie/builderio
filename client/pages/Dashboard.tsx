@@ -115,12 +115,12 @@ export default function Dashboard() {
   };
 
   const handleLogout = () => {
-    window.location.href = "http://localhost:3789/auth/logout";
+    window.location.href = "https://builderio-backend.onrender.com/auth/logout";
   };
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:3789/auth/me", {
+    fetch("https://builderio-backend.onrender.com/auth/me", {
       credentials: "include",
     })
       .then((res) => {

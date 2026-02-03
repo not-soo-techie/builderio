@@ -5,8 +5,7 @@ export default function Auth() {
     // This will be replaced with actual Google OAuth flow
     // For now, navigate to dashboard to simulate successful login
     // window.location.href = "/dashboard";
-    window.location.href = "http://localhost:3789/auth/google";
-
+    window.location.href = "https://builderio-backend.onrender.com/auth/google";
   };
 
   return (
@@ -21,7 +20,12 @@ export default function Auth() {
           to="/"
           className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-8 sm:mb-12"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg
+            className="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -60,7 +64,8 @@ export default function Auth() {
 
           {/* Subheading */}
           <p className="text-muted-foreground mb-8 sm:mb-10 leading-relaxed">
-            Use your Google account to log in and get your randomly assigned project. You can only assign a task once per workshop.
+            Use your Google account to log in and get your randomly assigned
+            project. You can only assign a task once per workshop.
           </p>
 
           {/* Google Login Button */}
@@ -102,7 +107,8 @@ export default function Auth() {
                   Why sign in with Google?
                 </p>
                 <p className="text-xs sm:text-sm text-muted-foreground">
-                  Google authentication ensures secure, one-time task assignment with verified student identities.
+                  Google authentication ensures secure, one-time task assignment
+                  with verified student identities.
                 </p>
               </div>
             </div>
